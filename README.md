@@ -33,7 +33,7 @@
 8. Задокументируйте проект в репозитории в формате Markdown и представьте его на сайте в формате HTML.
 9. Подготовить финальный отчет (в хронологической последовательности опишите этапы работы, отдельно должны быть представлены индивидуальные планы каждого участника).
 
-В рамках проектной практики для реализации технологии была выбрана Командная сторока ([Command-Line Tool]([Command-Line Tool](https://github.com/codecrafters-io/build-your-own-x?tab=readme-ov-file#build-your-own-command-line-tool)))
+В рамках проектной практики для реализации технологии была выбрана Командная сторока [Command-Line Tool](https://github.com/codecrafters-io/build-your-own-x?tab=readme-ov-file#build-your-own-command-line-tool)
 
 Ожидаемое время: 32–40 часов.
 
