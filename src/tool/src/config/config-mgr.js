@@ -4,13 +4,12 @@ import { cosmiconfigSync } from 'cosmiconfig';
 import { readFile } from 'fs/promises';
 import betterAjvErrors from 'better-ajv-errors';
 import Ajv from 'ajv';
-import { createLogger } from '../logger.js'; // Импортируем createLogger
+import { createLogger } from '../logger.js'; 
 
-// Получаем текущий путь к файлу
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Создаем экземпляр логгера
+
 const logger = createLogger('ConfigManager');
 
 const ajv = new Ajv();
@@ -40,3 +39,5 @@ export default async function getConfig() {
         return result.config;
     }
 }
+
+       
