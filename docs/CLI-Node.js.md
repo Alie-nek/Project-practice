@@ -18,7 +18,7 @@
 * Откройте PowerShell и установите необходимые библиотеки с помощью команды:
 ```npm install chalk arg ajv cosmiconfig debug```
 * Свяжите проект с тестовым проектом с помощью ```npm link```.
-Подробнее в [техническом руководстве] (https://github.com/Alie-nek/Project-practice/blob/master/docs/Вариативное%20задание.md#командная-строка-cli-на-javascript). 
+Подробнее в [техническом руководстве](https://github.com/Alie-nek/Project-practice/blob/master/docs/Вариативное%20задание.md#командная-строка-cli-на-javascript). 
 ## Использование
 Запустите CLI из директории testProject с помощью команды:
 
