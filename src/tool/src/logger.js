@@ -1,7 +1,7 @@
 import chalk from 'chalk';
 import debug from 'debug';
 
-export const createLogger = (name) => { // Используем export const
+export const createLogger = (name) => { 
     return {
         log: (...args) => console.log(chalk.gray(...args)),
         warning: (...args) => console.log(chalk.yellow(...args)),
