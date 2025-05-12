@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .parallax {
+    background-image: url('../images/background.jpg');
+    min-height: 100vh; 
+    padding: 2rem 0; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+        .post-container {
+    max-width: 800px;
+    margin: 2rem auto; 
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+
+        header, nav, footer {
+            background-color: rgba(52, 152, 219, 0.7);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            z-index: 3;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #485edb;
+        }
+
+        .post-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .post-date {
+            color: #999;
+            margin-bottom: 1rem;
+        }
+
+        .post-content {
+            line-height: 1.6;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            background-color: #3498db;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .back-link:hover {
+            background-color: #2980b9;
+        }
+
+ .button {
+            display: inline-block;
+            margin-top: 2rem;
+            background-color: #3498db;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+        }
+
+.fade-out {
+    opacity: 0; 
+    transition: opacity 0.5s ease;
+}
+
+.post-content .image-container img {
+    max-width: 45%;
+    height: auto;
+    margin: 70px; 
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Игровая платформа "Прогулки по Москве"</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html" onclick="animateTransition(event)">Главная</a></li>
+            <li><a href="../index.html#about" onclick="animateTransition(event)">О проекте</a></li>
+            <li><a href="../index.html#journal" onclick="animateTransition(event)">Журнал</a></li>
+            <li><a href="../members.html" onclick="animateTransition(event)">Участники</a></li>
+            <li><a href="../resources.html" onclick="animateTransition(event)">Ресурсы</a></li>
+        </ul>
+    </nav>
+
+    <div class="parallax">
+        <div class="post-container">
+            <h2 class="post-title">Командная строка на Node.js для выполнения различных команд</h2>
+            <p class="post-date">Дата публикации: 11 мая 2025</p>
+            <div class="post-content">
+                <p>Этот проект представляет собой реализацию скелета командной строки (CLI), позволяющую пользователям выполнять различные команды через текстовый интерфейс. CLI создана с использованием Node.js и современных стандартов JavaScript (ES6), что обеспечивает высокую производительность и легкость в использовании.</p> 
+               <h2>Возможности</h2> 
+              <ul> 
+              <li><strong>Запуск команды:</strong> CLI поддерживает команду --start, что позволяет запускать приложение и при введении неполной команды выводит список доступных команд.</li> 
+              <li><strong>Конфигурация:</strong> Возможность загружать конфигурацию из файла и проверять ее соответствие заданной схеме JSON.</li> 
+              <li><strong>Логирование:</strong> Использование библиотеки для логирования, что позволяет отслеживать события, предупреждения и ошибки.</li> 
+              <li><strong>Управление ошибками:</strong> Обработка ошибок конфигурации с информативными сообщениями для пользователей.</li> </ul> <h2>Требования</h2> <ul> <li>Node.js версии 12 и выше.</li> <li>Базовые знания JavaScript и Node.js.</li> <li>Среда разработки, такая как Visual Studio 2022 или любая другая, поддерживающая Node.js.</li> 
+              </ul>
+
+              <h2>Установка</h2> 
+              <ol> 
+              <li>Скачайте файлы технологии и перенесите их в свою среду разработки.</li> 
+              <li>Создайте проект в Visual Studio 2022, выбрав шаблон Node.js Console Application.</li> 
+              <li>Откройте PowerShell и установите необходимые библиотеки с помощью команды: <code>npm install chalk arg ajv cosmiconfig debug</code></li> 
+              <li>Свяжите проект с тестовым проектом с помощью <code>npm link</code>.</li> 
+              <p>Подробнее в <a href="https://github.com/Alie-nek/Project-practice/blob/master/docs/Вариативное%20задание.md#командная-строка-cli-на-javascript" target="_blank">техническом руководстве</a>.</p>
+              </ol>
+
+              <h2>Использование</h2> 
+              <p>Запустите CLI из директории testProject с помощью команды: <code>tool --start</code>. Это запустит приложение и выведет сообщение "Starting the app".</p> 
+
+              <h2>Архитектура</h2>
+              <p>Архитектура CLI состоит из нескольких компонентов:</p>
+              <ul>
+              <li><strong>Основной исполняемый файл (index.js):</strong> Обрабатывает аргументы командной строки, загружает конфигурацию и запускает соответствующие команды.</li>
+              <li><strong>Логгер (logger.js):</strong> Создает логгеры для отслеживания событий, предупреждений и ошибок.</li> 
+              <li><strong>Команды (commands/start.js):</strong> Определяет логику запуска приложения.</li> 
+              <li><strong>Менеджер конфигурации (config/config-mgr.js):</strong> Загружает и проверяет конфигурацию на соответствие JSON-схеме.</li> 
+              <li><strong>Схема конфигурации (config/schema.json):</strong> Описывает структуру и типы данных допустимой конфигурации.</li> 
+              </ul> 
+
+              <h2>Поддерживаемые команды и возможно выводимые ошибки</h2> 
+              <p>CLI поддерживает только одну команду:</p> 
+              <ul> 
+              <li><code>--start:</code> Запускает приложение с заданной конфигурацией.</li> 
+             </ul> 
+              <p>CLI может выводить такие ошибки:</p> 
+              <ul> 
+              <li><code>Could not find configuration, using default:</code> CLI не может найти файл конфигурации в текущем рабочем каталоге, поэтому будет использовать порт по умолчанию.</li> 
+              <li><code>Invalid configuration was supplied:</code> файл конфигурации найден, но его содержимое не соответствует ожидаемой структуре или типам данных, описанным в JSON-схеме.</li> 
+              </ul> 
+              <h2>Пример использования и вывода ошибок</h2>
+              <img src="../images/Снимок экрана (995).png" alt="" style="border-radius: 5px;">
+              <img src="../images/Снимок экрана (1001).png" alt="Персонаж" style="border-radius: 5px;">
+             </div>
+            <a href="../index.html#journal" onclick="animateTransition(event)" class="button">Назад к журналу</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Игровая платформа "Прогулки по Москве". Все права защищены.</p>
+    </footer>
+
+    <script>
+        function animateTransition(event) {
+            event.preventDefault();
+            const targetUrl = event.currentTarget.getAttribute('href');
+            document.body.classList.add('fade-out');
+            setTimeout(() => {
+                window.location.href = targetUrl;
+            }, 500); 
+        }
+    </script>
+</body>
+</html>
+
