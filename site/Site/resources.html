@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ресурсы - Игровая платформа "Прогулки по Москве"</title>
+    <style>
+        /* Общие стили (можно вынести в отдельный CSS-файл) */
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+            overflow-x: hidden;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        body.fade-out {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        .wrapper {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            position: relative;
+            z-index: 2;
+        }
+
+        header {
+            text-align: center;
+            padding: 1rem;
+            background-color: rgba(52, 152, 219, 0.7);
+            color: #fff;
+            position: relative;
+            z-index: 10;
+            border-radius: 0;
+        }
+
+        nav {
+            background-color: rgba(52, 152, 219, 0.7);
+            color: #fff;
+            padding: 10px;
+            border-radius: 0 0 8px 8px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 1rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #485edb;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .resource-card {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease; 
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px); 
+        }
+
+        .resource-card h3 {
+            color: #3498db;
+            margin-top: 0;
+        }
+
+        .resource-card p {
+            margin-bottom: 10px;
+        }
+
+        .resource-card a {
+            display: inline-block;
+            background-color: #3498db;
+            color: #fff;
+            padding: 8px 12px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .resource-card a:hover {
+            background-color: #2980b9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: rgba(52, 152, 219, 0.7);
+            color: #fff;
+            border-radius: 8px;
+            margin-top: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Параллакс */
+        .parallax {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .parallax-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 120%;
+            background-image: url('images/background.jpg'); 
+            background-size: cover;
+            background-position: center;
+        }
+    .fade-out {
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="parallax">
+        <div class="parallax-bg"></div>
+    </div>
+
+    <div class="wrapper">
+        <header>
+            <h1>Полезные ресурсы</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html" onclick="animateTransition(event)">Главная</a></li>
+        <li><a href="index.html#about" onclick="animateTransition(event)">О проекте</a></li>
+        <li><a href="index.html#journal" onclick="animateTransition(event)">Журнал</a></li>
+        <li><a href="members.html" onclick="animateTransition(event)">Участники</a></li>
+        <li><a href="resources.html" onclick="animateTransition(event)">Ресурсы</a></li>
+
+            </ul>
+        </nav>
+
+        <main>
+            <section class="resource-card">
+                <h3>Эколого-культурное объединение «Слобода» — Басмания </h3>
+                <p>Сайт заказчика проекта. Здесь вы можете ознакомится с историей музея и другими проектами заказчика.</p>
+                <a href="https://basmania.ru/muzej/o-muzee/roo-eko-sloboda/membership/">Перейти к ресурсу</a>
+            </section>
+
+            <section class="resource-card">
+                <h3>Генплан по реконструкции Москвы 1935 года</h3>
+                <p>Здесь вы можете подробнее изучить план реконструкции Москвы 1935 года, который фигурирует в нашей игре.</p>
+                <a href="https://genplanmos.ru/publication/2020_06_22_moskva-v-genplane-1935-goda/">Перейти к ресурсу</a>
+            </section>
+
+            <section class="resource-card">
+                <h3>Старые карты Москвы</h3>
+                <p>Здесь вы можете посмотреть, что из себя представлял Басманный район в разные эпохи времени.</p>
+                <a href="https://retromap.ru/081888_z15_55.764030,37.655992">Перейти к ресурсу</a>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Игровая платформа "Прогулки по Москве"</p>
+        </footer>
+    </div>
+
+    <script>
+        
+        function applyParallax() {
+            const parallaxBg = document.querySelector('.parallax-bg');
+            let offset = window.pageYOffset;
+            parallaxBg.style.transform = 'translateY(' + offset * 0.4 + 'px)';
+        }
+
+        window.addEventListener('scroll', applyParallax);
+        applyParallax();
+
+        function animateTransition(event) {
+            event.preventDefault(); 
+
+            document.body.classList.add('fade-out'); 
+
+            setTimeout(function() {
+                window.location.href = event.target.href; 
+            }, 500); 
+        }
+
+    </script>
+</body>
+</html>

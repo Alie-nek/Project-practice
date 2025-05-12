@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игровая платформа "Прогулки по Москве"</title>
+
+    <style>
+       
+        body, html {
+            height: 100%;
+            margin: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .wrapper {
+            position: relative;
+            min-height: 100%;
+            overflow: hidden;
+        }
+
+        header, nav, footer {
+            background-color: rgba(52, 152, 219, 0.7);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #485edb;
+        }
+
+        .parallax {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .parallax-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 120%;
+            background-image: url('images/background.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+        }
+
+        .parallax-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
+       
+        .about-section {
+            padding: 2rem;
+            background-color: white;
+        }
+
+        
+        .journal-section {
+            padding: 2rem;
+            background-color: #e0e0e0;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .journal-section.visible {
+            opacity: 1;
+        }
+
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-item {
+            flex: 0 0 100%; 
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+
+        .carousel-item h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .carousel-item p {
+            margin-bottom: 1rem;
+        }
+
+        .carousel-item .read-more {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+         .carousel-item .read-more:hover {
+            background-color: #2980b9;
+        }
+
+        .carousel-nav {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .carousel-nav button {
+            background-color: transparent;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.25rem;
+        }
+ body {
+            transition: opacity 0.5s ease, transform 0.5s ease; 
+        }
+
+        body.fade-out {
+            opacity: 0;
+            transform: translateY(-20px); 
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Игровая платформа "Прогулки по Москве"</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="#about">О проекте</a></li>
+                <li><a href="#journal">Журнал</a></li>
+                <li><a href="members.html" onclick="animateTransition(event)">Участники</a></li> 
+                <li><a href="resources.html" onclick="animateTransition(event)">Ресурсы</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section class="parallax">
+                <div class="parallax-bg"></div>
+                <div class="parallax-content">
+                    <h2>Басманные Хроники. Путешествие через вселенные</h2>
+                    <p>Что скрывает Москва, которой никогда не было? В “Басманных хрониках” ученый, одержимый генпланом реконструкции, отправляется на поиски альтернативной вселенной, но попадает в прошлое. Чтобы вернуться, ему придется разгадать тайны времени, повстречать знаменитых исторических деятелей и выполнить их задания.</p>
+                </div>
+            </section>
+
+            <section class="about-section" id="about">
+                <h2>О проекте</h2>
+                <p>Проект Игровая платформа "Прогулки по Москве" занимается разработкой игры “Басманные хроники: Путешествие через вселенные”, которая представляет собой 2D-адвенчуру в жанре point-and-click, разрабатываемую на движке Godot. В центре сюжета — ученый, стремящийся попасть в альтернативную вселенную, где реализован генеральный план реконструкции Москвы 1935 года. Непредвиденные обстоятельства отправляют его в прошлое, запуская цепь перемещений во времени.</p>
+
+<i>Ключевые особенности проекта:</i>
+<p>Сюжет:Оригинальная история о путешествии во времени, альтернативной истории и научных поисках.</p>
+<p>Геймплей: Исследование локаций, взаимодействие с объектами, решение головоломок и ведение диалогов с персонажами.</p>
+<p>Сеттинг: Уникальное сочетание альтернативной Москвы 1935 года и различных исторических эпох.</p>
+<p>Персонажи: Встречи с историческими личностями и возможность влиять на ход истории.</p>
+<p>Технологии: Использование Godot Engine и веб-платформы для обеспечения доступности игры.</p>
+            </section>
+
+             <section class="journal-section" id="journal">
+                <h2>Журнал проекта</h2>
+
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-item">
+                            <h3>Разрабока первой локации игры</h3>
+                            <p>Первая локация “Басманных хроник” готова: путешествие начинается в лаборатории времени!</p>
+                            <a href="journal/post1.html" class="read-more">Подробнее</a>
+                        </div>
+
+                        <div class="carousel-item">
+                            <h3>Дизайн главного персонажа и первой локации</h3>
+                            <p>Первая локация и главный герой “Басманных хроник” - готова!</p>
+                            <a href="journal/post2.html" class="read-more">Подробнее</a>
+                        </div>
+
+                        <div class="carousel-item">
+                            <h3>Создание главного меню игры</h3>
+                            <p>Главное меню «Басманных хроник» - готово к запуску!</p>
+                            <a href="journal/post3.html" class="read-more">Подробнее</a>
+                        </div>
+
+                        <div class="carousel-item">
+                            <h3>Взаимодействие с организацией-партнером</h3>
+                            <p>Встреча с экспертом по истории Москвы прошла успешно!</p>
+                            <a href="journal/post4.html" class="read-more">Подробнее</a>
+                        </div>
+
+                        <div class="carousel-item">
+                            <h3>Вариативная часть проектной практики</h3>
+                            <p>Реализация командной строки на Node.js</p>
+                            <a href="journal/post5.html" class="read-more">Подробнее</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="carousel-nav">
+                    <button onclick="prevSlide()">&#10094;</button>
+                    <button onclick="nextSlide()">&#10095;</button>
+                </div>
+
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Игровая платформа "Прогулки по Москве"</p>
+        </footer>
+    </div>
+
+    <script>
+        
+        const parallaxBg = document.querySelector('.parallax-bg');
+
+        function applyParallax() {
+            let offset = window.pageYOffset;
+            parallaxBg.style.transform = 'translateY(' + offset * 0.4 + 'px)';
+        }
+
+        window.addEventListener('scroll', applyParallax);
+        applyParallax();
+
+        
+        const journalSection = document.querySelector('.journal-section');
+
+        function checkJournalVisibility() {
+            if (window.pageYOffset > 700) {
+                journalSection.classList.add('visible');
+            } else {
+                journalSection.classList.remove('visible');
+            }
+        }
+
+        window.addEventListener('scroll', checkJournalVisibility);
+        checkJournalVisibility();
+
+        
+        const carousel = document.querySelector('.carousel');
+        const carouselItems = document.querySelectorAll('.carousel-item');
+
+        let currentItem = 0;
+
+        function updateCarousel() {
+            if (carousel) {
+                carousel.style.transform = `translateX(-${currentItem * 100}%)`;
+            }
+        }
+
+        function nextSlide() {
+            if (carouselItems.length > 0) {
+                currentItem = (currentItem + 1) % carouselItems.length;
+                updateCarousel();
+            }
+        }
+
+        function prevSlide() {
+            if (carouselItems.length > 0) {
+                currentItem = (currentItem - 1 + carouselItems.length) % carouselItems.length;
+                updateCarousel();
+            }
+        }
+            function animateTransition(event) {
+            event.preventDefault(); 
+
+            document.body.classList.add('fade-out'); 
+
+            setTimeout(function() {
+                window.location.href = event.target.href; 
+            }, 500); 
+        }
+    </script>
+</body>
+</html>

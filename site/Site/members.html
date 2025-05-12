@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Участники - Игровая платформа "Прогулки по Москве"</title>
+    <style>
+        /* Общие стили */
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+            overflow-x: hidden; /* Предотвращаем горизонтальную прокрутку */
+        }
+
+        .wrapper {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный белый */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            position: relative;
+            z-index: 2; /* Чтобы контент был над параллаксом */
+        }
+.fade-out {
+    opacity: 0; /* Прозрачность при исчезновении */
+    transition: opacity 0.5s ease; /* Плавный переход */
+}
+        /* Шапка */
+        header {
+            text-align: center;
+            padding: 1rem;
+            background-color: rgba(52, 152, 219, 0.7); /* Как на главной */
+            color: #fff;
+            position: relative;
+            z-index: 10;
+            border-radius: 0; /* Убираем скругление */
+        }
+
+        nav {
+            background-color: rgba(52, 152, 219, 0.7);
+            color: #fff;
+            padding: 10px;
+            border-radius: 0 0 8px 8px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 1rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #485edb;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .group-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+
+        .member-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .member-list li {
+            margin-bottom: 5px;
+        }
+
+        .group-description {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: rgba(52, 152, 219, 0.7);
+            color: #fff;
+            border-radius: 8px;
+            margin-top: 20px;
+            position: relative;
+            z-index: 2; /* Чтобы был над параллаксом */
+        }
+
+        /* Параллакс */
+        .parallax {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .parallax-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 120%; /* Чуть больше, чтобы не было видно края при прокрутке */
+            background-image: url('images/background.jpg'); /* Используйте ту же картинку, что и на главной */
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="parallax">
+        <div class="parallax-bg"></div>
+    </div>
+    <div class="wrapper">
+        <header>
+            <h1>Участники проекта "Прогулки по Москве"</h1>
+        </header>
+
+        <nav>
+    <ul>
+        <li><a href="index.html" onclick="animateTransition(event)">Главная</a></li>
+        <li><a href="index.html#about" onclick="animateTransition(event)">О проекте</a></li>
+        <li><a href="index.html#journal" onclick="animateTransition(event)">Журнал</a></li>
+        <li><a href="members.html" onclick="animateTransition(event)">Участники</a></li>
+        <li><a href="resources.html" onclick="animateTransition(event)">Ресурсы</a></li>
+    </ul>
+</nav>
+
+
+        <main>
+            <h2 class="group-title">Руководитель проекта</h2>
+            <ul class="member-list">
+                <li>Косарин Сергей Петрович</li>
+            </ul>
+
+            <h2 class="group-title">Сценаристы</h2>
+            <p class="group-description">Создание главного персонажа, выбор исторических локация Басманного района и создания по ним маршрута игры, разработка сюжетных взаимодействий персонажа со значимыми историческими личностями.</p>
+            <ul class="member-list">
+                <b>Новоселова Мария Викторовна</b>
+                <li>Исаева Софья Адмирановна</li>
+                <li>Марущак Анастасия Олеговна</li>
+                <li>Савельева Марина Александровна</li>
+                <li>Сальников Даниил Алексеевич</li>
+
+            </ul>
+
+            <h2 class="group-title">Программисты</h2>
+            <p class="group-description">Реализация игровой логики и функциональности.</p>
+            <ul class="member-list">
+                <li>Антипова Анастасия Максимовна</li>
+                <li>Бартенов Максим Максимович</li>
+                <li>Белай Александр Валерьевич</li>
+                <li>Гайнутдинов Рамат Азатович</li>
+                <li>Идрисов Тамерлан Рамиз оглы</li>
+                <li>Кулагин Степан Андреевич</li>
+                <li>Медведев Данил Александрович</li>
+                <li>Оганесян Максим Каренович</li>
+                <li>Супаев Илиязбек</li>
+                <li>Тушина Валерия Николаевна</li>
+            </ul>
+
+            <h2 class="group-title">Дизайнеры</h2>
+            <p class="group-description">Разработка визуального стиля игры, дизайн интерфейса, локаций и персонажей.</p>
+            <ul class="member-list">
+                <li>Казакова Диана Александравна</li>
+                <li>Минеева Анастасия Игоревна</li>
+                <li>Наурзова Альвина Максутовна</li>
+                <li>Цыганок Евгения Ивановна</li>
+            
+            </ul>
+
+            <h2 class="group-title">Аналитики</h2>
+            <p class="group-description">Защита проекта, анализ целевой аудитории и успешности продукта.</p>
+            <ul class="member-list">  
+                <li>Борисова Ксения Павловна</li>
+                <li>Варушкин Тимофей Александрович</li>
+                <li>Котова Анастасия Георгиевна</li> 
+            </ul>
+
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Игровая платформа "Прогулки по Москве"</p>
+        </footer>
+    </div>
+    <script>
+        // Функция для параллакса
+        function applyParallax() {
+            const parallaxBg = document.querySelector('.parallax-bg');
+            let offset = window.pageYOffset;
+            parallaxBg.style.transform = 'translateY(' + offset * 0.4 + 'px)';
+        }
+
+        window.addEventListener('scroll', applyParallax);
+        applyParallax();
+
+        function animateTransition(event) {
+            event.preventDefault(); // Предотвращаем обычный переход по ссылке
+
+            document.body.classList.add('fade-out'); // Добавляем класс для анимации исчезновения
+
+            setTimeout(function() {
+                window.location.href = event.target.href; // Переходим на новую страницу после анимации
+            }, 500); 
+        }
+
+    </script>
+</body>
+</html>

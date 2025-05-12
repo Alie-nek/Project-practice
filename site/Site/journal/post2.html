@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <style>
+        /* Общие стили */
+        body, html {
+            height: 100%;
+            margin: 0;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .parallax {
+    background-image: url('../images/background.jpg');
+    min-height: 100vh; 
+    padding: 2rem 0; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+        .post-container {
+    max-width: 800px;
+    margin: 2rem auto; 
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+
+        header, nav, footer {
+            background-color: rgba(52, 152, 219, 0.7);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            z-index: 3;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #485edb;
+        }
+
+        .post-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .post-date {
+            color: #999;
+            margin-bottom: 1rem;
+        }
+
+        .post-content {
+            line-height: 1.6;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            background-color: #3498db;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .back-link:hover {
+            background-color: #2980b9;
+        }
+
+.button {
+            display: inline-block;
+            margin-top: 2rem;
+            background-color: #3498db;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+        }
+
+.fade-out {
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
+}
+
+.post-content .image-container img {
+    max-width: 45%;
+    height: auto;
+    margin: 70px; 
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Игровая платформа "Прогулки по Москве"</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html" onclick="animateTransition(event)">Главная</a></li>
+            <li><a href="../index.html#about" onclick="animateTransition(event)">О проекте</a></li>
+            <li><a href="../index.html#journal" onclick="animateTransition(event)">Журнал</a></li>
+            <li><a href="../members.html" onclick="animateTransition(event)">Участники</a></li>
+            <li><a href="../resources.html" onclick="animateTransition(event)">Ресурсы</a></li>
+        </ul>
+    </nav>
+
+    <div class="parallax">
+        <div class="post-container">
+            <h2 class="post-title">Дизайн главного персонажа и первой локации</h2>
+            <p class="post-date">Дата публикации: 30 апреля 2025</p>
+            <div class="post-content">
+                <p>Команда дизайнеров “Басманных хроник: Путешествие через вселенные” рада поделиться важной новостью: наши художники завершили работу над артом первой локации, научным центром, и образом главного героя - Анатолия Синицина!</p>
+                <p>Научный центр Синицина - это ключевое место в игре, где разворачивается основное действие. Он отражает суть увлечений и амбиций Анатолия, а также служит отправной точкой для его невероятного путешествия.</p>
+                <p>Анатолий Синицин - это ученый, который мечтает о создании машины времени и перемещении в альтернативные реальности. Его образ сочетает в себе гениальность, увлеченность и некоторую неординарность.</p>
+                <p>Посмотрите на новые арты, изображающие научный центр и Анатолия Синицина.</p>
+            <div class="image-container">
+            <img src="../images/Персонаж.jpg" alt="Персонаж" style="border-radius: 5px;">
+            <img src="../images/первая локация.jpg" alt="Первая локация игры" style="border-radius: 5px;">
+            </div>
+            </div>
+            <a href="../index.html#journal" onclick="animateTransition(event)" class="button">Назад к журналу</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Игровая платформа "Прогулки по Москве". Все права защищены.</p>
+    </footer>
+
+    <script>
+        function animateTransition(event) {
+            event.preventDefault();
+            const targetUrl = event.currentTarget.getAttribute('href');
+            document.body.classList.add('fade-out');
+            setTimeout(() => {
+                window.location.href = targetUrl;
+            }, 500); 
+        }
+    </script>
+</body>
+</html>
+
