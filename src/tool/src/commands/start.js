@@ -1,6 +1,5 @@
-import { createLogger } from '../logger.js'; // Импортируем createLogger
+import { createLogger } from '../logger.js'; 
 
-// Создаем экземпляр логгера
 const logger = createLogger('AppStarter');
 
 const start = (config) => {
@@ -8,4 +7,4 @@ const start = (config) => {
     logger.debug('Received configuration', config);
 };
 
-export default start; // Экспортируем функцию
+export default start;
